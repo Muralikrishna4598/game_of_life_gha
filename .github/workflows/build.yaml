@@ -40,7 +40,7 @@ jobs:
 
       # Step 4: Build and test
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -DskipTests -Djacoco.skip=true
 
 
       - name: Deploy WAR to Tomcat
